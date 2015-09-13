@@ -1,0 +1,10 @@
+colorscheme ir_black
+iunmap <Esc>
+set clipboard=unnamed
+let g:pymode_rope = 1
+set nospell
+
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
