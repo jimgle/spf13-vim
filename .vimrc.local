@@ -12,6 +12,8 @@ if WINDOWS()
   imap <C-V> <ESC>"+gpa
   colorscheme atom
   set guifont=Consolas:h12:cANSI
+  imap <C-/> <ESC>gcc<CR>a
+  nmap <C-/> gcc
 elif LINUX()
   colorscheme ir_black
 endif
