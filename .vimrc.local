@@ -13,7 +13,7 @@ if WINDOWS()
   colorscheme atom
   set guifont=Consolas:h12:cANSI
   let g:pymode_rope = 0
-elif LINUX()
+elseif LINUX()
   colorscheme ir_black
   let g:pymode_rope = 1
 endif
