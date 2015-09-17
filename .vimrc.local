@@ -15,5 +15,5 @@ if WINDOWS()
   let g:pymode_rope = 0
 elseif LINUX()
   colorscheme ir_black
-  let g:pymode_rope = 1
+  let g:pymode_rope = 0
 endif
