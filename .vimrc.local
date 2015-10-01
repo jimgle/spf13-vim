@@ -1,6 +1,10 @@
 
 iunmap <Esc>
+<<<<<<< HEAD
 let g:pymode_rope = 0
+=======
+
+>>>>>>> 417ed27fd4a4a314080715db8698ce32d8ee42ff
 set nospell
 
 noremap <silent> <C-S>          :update<CR>
@@ -21,6 +25,11 @@ if WINDOWS()
   imap <C-V> <ESC>"+gpa
   " colorscheme atom
   set guifont=Consolas:h12:cANSI
+<<<<<<< HEAD
+=======
+  let g:pymode_rope = 0
+>>>>>>> 417ed27fd4a4a314080715db8698ce32d8ee42ff
 elseif LINUX()
   colorscheme ir_black
+  let g:pymode_rope = 0
 endif
