@@ -1,19 +1,26 @@
 
 iunmap <Esc>
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 set nospell
 
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
+function MyEnterfunc()
+    if pumvisible()
+        return "\<esc>a"
+    else
+        return "\<Enter>"
+    endif
+endf
+inoremap <silent> <buffer> <CR> <C-r>=MyEnterfunc()<Cr>
+
 if WINDOWS()
   vmap <C-C> "+y
   imap <C-V> <ESC>"+gpa
-  colorscheme atom
+  " colorscheme atom
   set guifont=Consolas:h12:cANSI
-  imap <C-/> <ESC>gcc<CR>a
-  nmap <C-/> gcc
-elif LINUX()
+elseif LINUX()
   colorscheme ir_black
 endif
