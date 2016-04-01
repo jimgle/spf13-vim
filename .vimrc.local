@@ -6,6 +6,10 @@ noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
 
+autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellescape(@%,1)<CR>
+autocmd FileType sh nnoremap <buffer> <F5> :exec '!bash' shellescape(@%, 1)<CR>
+autocmd FileType javascript nnoremap <buffer> <F5> :exec '!node' shellescape(@%, 1)<CR>
+
 function MyEnterfunc()
     if pumvisible()
         return "\<esc>a"
@@ -15,6 +19,7 @@ function MyEnterfunc()
 endf
 inoremap <silent> <buffer> <CR> <C-r>=MyEnterfunc()<Cr>
 
+
 if WINDOWS()
   vmap <C-C> "+y
   imap <C-V> <ESC>"+gpa
@@ -22,4 +27,12 @@ if WINDOWS()
   set guifont=Consolas:h12:cANSI
 elseif LINUX()
   " colorscheme ir_black
+elseif OSX()
+  colorscheme ir_black
+  " hi Comment ctermfg=magenta
+  set background=light
+  " Allow us to use Ctrl-s and Ctrl-q as keybinds
+  silent !stty -ixon
+  " Restore default behaviour when leaving Vim.
+  autocmd VimLeave * silent !stty ixon"
 endif
