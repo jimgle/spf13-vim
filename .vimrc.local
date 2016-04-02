@@ -10,6 +10,8 @@ autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellescape(@%,1)
 autocmd FileType sh nnoremap <buffer> <F5> :exec '!bash' shellescape(@%, 1)<CR>
 autocmd FileType javascript nnoremap <buffer> <F5> :exec '!node' shellescape(@%, 1)<CR>
 
+let g:pymode_rope_complete_on_dot = 0
+
 function MyEnterfunc()
     if pumvisible()
         return "\<esc>a"
