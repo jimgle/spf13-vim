@@ -1,0 +1,4 @@
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tikhomirov/vim-glsl'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
