@@ -1,4 +1,4 @@
-iunmap <Esc>
+"iunmap <Esc>
 set nospell
 
 set gfn=Menlo\ Regular:h14
@@ -31,7 +31,7 @@ let g:ycm_confirm_extra_conf = 0
 
 " fix color solarized  issue
 let g:solarized_termcolors=16
-colorscheme solarizedCtsAppTestCases
+colorscheme solarized
 
 if WINDOWS()
   vmap <C-C> "+y
