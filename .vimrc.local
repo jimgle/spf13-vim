@@ -29,6 +29,10 @@ inoremap <silent> <buffer> <CR> <C-r>=MyEnterfunc()<Cr>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 
+" fix color solarized  issue
+let g:solarized_termcolors=16
+colorscheme solarizedCtsAppTestCases
+
 if WINDOWS()
   vmap <C-C> "+y
   imap <C-V> <ESC>"+gpa
